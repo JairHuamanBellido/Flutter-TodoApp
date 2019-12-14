@@ -9,16 +9,32 @@ class App extends StatefulWidget {
 
 class _AppState extends State<App> {
   final _formKey = GlobalKey<FormState>();
+  final myController = TextEditingController();
 
-  int count = 0;
 
-  List numbers = [1, 2, 34, 2];
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is removed from the
+    // widget tree.
+    myController.dispose();
+    super.dispose();
+  }
+
+  _printLatestValue() {
+    print("Second text field: ${myController.text}");
+  }
+
+  List tasks = [];
   String name = "";
   void increment() {
     print("Aumentando");
     setState(() {
-      numbers.add(name);
+        tasks.add(name);
     });
+
+    myController.clear();
+    
+    
   }
 
   void setName(String value) {
@@ -40,17 +56,17 @@ class _AppState extends State<App> {
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
-                      TextFormField(
-                        decoration:
-                            InputDecoration(hintText: 'Enter your email'),
-                        onChanged: (String value) {
-                          this.setName(value);
+
+                      TextField(
+                        controller: myController,
+                        onChanged: (String value){
+                            setName(value);
                         },
                       ),
                       RaisedButton(
                         onPressed: increment,
                         child: Text(
-                          'Aumentar',
+                          'Agregar',
                           textDirection: TextDirection.ltr,
                         ),
                       ),
@@ -58,7 +74,7 @@ class _AppState extends State<App> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          for (var item in numbers) Text(item.toString())
+                          for (var item in tasks) Text(item.toString())
                         ],
                       )
                     ],
