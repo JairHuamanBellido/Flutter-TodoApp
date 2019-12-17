@@ -24,7 +24,7 @@ class Header extends StatelessWidget {
                 'Martes',
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 36, fontWeight: FontWeight.w300),
+                style: TextStyle(fontSize: 36, fontWeight: FontWeight.w300, fontFamily: 'Nunito'),
               ),
             ),
             Container(
@@ -33,8 +33,9 @@ class Header extends StatelessWidget {
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color.fromRGBO(0, 0, 0, .67),
-                  fontWeight: FontWeight.w600,
+                  color: Color.fromRGBO(0, 0, 0, .37),
+                  fontWeight: FontWeight.w400,
+                  fontFamily: 'Nunito'
                 ),
               ),
             )
