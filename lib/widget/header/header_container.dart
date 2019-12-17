@@ -21,7 +21,7 @@ class Header extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(top: 24, bottom: 8),
               child: Text(
-                'Monday',
+                'Martes',
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 36, fontWeight: FontWeight.w300),
@@ -29,11 +29,11 @@ class Header extends StatelessWidget {
             ),
             Container(
               child: Text(
-                'January 16, 2019',
+                'Diciembre 17, 2019',
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color.fromRGBO(0, 0, 0, .37),
+                  color: Color.fromRGBO(0, 0, 0, .67),
                   fontWeight: FontWeight.w600,
                 ),
               ),

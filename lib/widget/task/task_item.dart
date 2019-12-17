@@ -24,7 +24,7 @@ class _TaskState extends State<Task> {
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
             value: isComplete,
             checkColor: Colors.white,
-            activeColor: Color.fromRGBO(72, 209, 162, 1),
+            activeColor: Color.fromRGBO(72, 182, 162, 1),
             onChanged: (bool resp) {
               setState(() {
                 isComplete = resp;
@@ -36,7 +36,7 @@ class _TaskState extends State<Task> {
           Text(
             widget.task,
             textDirection: TextDirection.ltr,
-            style: (  TextStyle(color: isComplete? Color.fromRGBO(72, 209, 162, 1):Colors.black38 )),
+            style: (  TextStyle(color: isComplete? Color.fromRGBO(72, 182, 162, 1):Colors.black87 )),
           )
         ],
       ),

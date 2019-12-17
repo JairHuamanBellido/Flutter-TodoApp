@@ -41,7 +41,7 @@ class FormTask extends StatelessWidget {
                 splashColor: Color.fromRGBO(72, 150, 162, .5),
                 onPressed: _addTask,
                 padding: EdgeInsets.symmetric(vertical: 16),
-                color: Color.fromRGBO(72, 209, 162, 1),
+                color: Color.fromRGBO(72, 182, 162, 1),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6)),
                 child: Text(
