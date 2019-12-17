@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:same_project/Form_task.dart';
-import 'package:same_project/Task_item.dart';
+import 'package:same_project/widget/header/header_container.dart';
+import 'package:same_project/widget/task/task_container.dart';
+import 'package:same_project/widget/task/task_item.dart';
+import 'package:same_project/widget/task/form_task.dart';
 
 void main() => runApp(App());
 
@@ -40,6 +42,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: Stack(
@@ -47,16 +50,13 @@ class _AppState extends State<App> {
               Positioned(
                 top: 0,
                 child: Container(
-                  width: 200,
-                  height: 500,
-                  child: ListView.builder(
-                    itemCount: tasks.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                          child: Task(
-                        task: tasks[index],
-                      ));
-                    },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                        Header(),
+                        TaskContainer(tasks: this.tasks)
+                    ],
                   ),
                 ),
               ),

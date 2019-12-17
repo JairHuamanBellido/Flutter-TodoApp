@@ -17,11 +17,13 @@ class FormTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 32),
+        height: MediaQuery.of(context).size.height * 0.25 ,
+        padding: EdgeInsets.symmetric(horizontal: 32 ),
         width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+              
             TextField(
               controller: this.controller,
               onChanged: (String value) {
@@ -43,8 +45,8 @@ class FormTask extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6)),
                 child: Text(
-                  'Add',
-                  style: TextStyle(color: Colors.white),
+                  'Add Task',
+                  style: TextStyle(color: Colors.white,fontSize: 18, fontWeight: FontWeight.w600),
                 ),
               ),
             ),
