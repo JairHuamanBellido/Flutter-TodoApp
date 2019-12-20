@@ -10,7 +10,7 @@ class TaskContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 500,
+      height: MediaQuery.of(context).size.height* 0.4,
       
       
       child: ListView.builder(
